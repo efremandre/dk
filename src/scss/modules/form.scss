@@ -1,0 +1,94 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.form-container {
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+}
+
+.form-callback {
+	position: fixed;
+	box-sizing: border-box;
+	@include mix.displayFlex(flex, center, center);
+	z-index: 8;
+	top: 0;
+	left: 0;
+	right: 0;
+	min-height: 30px;
+	width: 100%;
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 1em;
+	color: var.$darkColor;
+	@include mix.adaptivFont(16, 14);
+	background: var.$lightColor;
+	box-shadow: 4px 2px 11px 1px rgba(1, 1, 1, .6);
+	opacity: 0;
+	transform: translateY(-100%);
+	transition: opacity .5s ease, transform .5s ease;
+
+	&._form-callback-active {
+		opacity: 1;
+		transform: translateY(50px);
+	}
+}
+
+.form {
+	display: flex;
+	align-items: flex-end;
+	gap: 1.6em;
+
+	&__input {
+		flex: 0 1 33.33%;
+		position: relative;
+
+		transition: opacity .6s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: .6;
+			}
+		}
+
+		&>input {
+			width: 100%;
+			padding: 1em 1em 1em 0;
+			box-sizing: border-box;
+			@include mix.adaptivFont(24, 18);
+			text-transform: lowercase;
+			color: var.$lightColor;
+			outline: none;
+			border: none;
+			border-bottom: 1px solid var.$lightColor;
+			background: none;
+			transition: border-bottom-color .6s ease, color .6s ease;
+
+			&:-webkit-autofill,
+			&:-webkit-autofill:hover,
+			&:-webkit-autofill:focus,
+			&:-webkit-autofill:active {
+				-webkit-box-shadow: 0 0 0 30px var.$darkColor inset !important;
+				-webkit-text-fill-color: var.$darkColor !important;
+				-webkit-backdrop-filter: unset;
+			}
+
+			&::placeholder {
+				color: var.$lightColor;
+			}
+
+			&:focus {
+				border-bottom-color: #9e9d9d;
+
+				&::placeholder {
+					color: #9e9d9d;
+				}
+			}
+		}
+	}
+
+	&__button {
+		flex: 0 1 33.33%;
+	}
+}

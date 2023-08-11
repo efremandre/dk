@@ -1,0 +1,57 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.navigation {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 7;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 50px 0 25px 0;
+	color: var.$lightColor;
+
+	&__wrapper {
+		@include mix.displayFlex(flex, flex-end, center);
+		box-sizing: border-box;
+		height: 50px;
+	}
+
+	&__button-block {
+		position: absolute;
+		top: 50px;
+		left: 0;
+	}
+
+	&__button {
+		display: grid;
+		place-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		background: var.$accentColor;
+		transition: transform .6s ease, opacity .6s ease, visibility .6s ease;
+
+		&._hidden {
+			transform: scale(0);
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+
+.warning {
+
+	& path {
+		transition: fill .6s ease;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			& path {
+				fill: red;
+			}
+		}
+	}
+}
