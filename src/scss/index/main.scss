@@ -1,14 +1,16 @@
 @use '../base/variable' as var;
 @use 'hero';
 @use 'key';
-@use 'warning-message';
-@use 'contact';
-@use '../modules/modal-img';
+@use 'main-slider';
 
 .main {
-	flex: 1 1 auto;
+	position: relative;
+	z-index: 1;
+	height: 100%;
+	opacity: 1;
 
-	&__contact {
-		padding: 1em 0;
+	&._show {
+		visibility: hidden;
+		opacity: 0;
 	}
 }

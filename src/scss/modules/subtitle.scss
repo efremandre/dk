@@ -3,26 +3,30 @@
 
 .subtitle {
 	margin: 0;
-	@include mix.adaptivFont(var.$subTitleFontSize, var.$subTitleFontSizeMin);
+
+	@media screen and (min-width: 1920px) {
+		font-size: 25px;
+	}
+
+	@include mix.adaptivFont(var.$subTitleFontSize, 12);
 	font-family: var.$subFamily;
 	font-weight: var.$subTitleWeight;
 	line-height: var.$subTitleHeight;
 	color: var.$subTitleColor;
 	letter-spacing: 31.2px;
 	text-transform: uppercase;
-	text-align: center;
 }
 
 .subtitle-accent {
 	display: block;
 	margin-top: 46px;
-	@include mix.adaptivFont(110, 80);
+	@include mix.adaptivFont(110, 36);
 	line-height: 100%;
 	letter-spacing: 11px;
 }
 
 .subtitle-description {
-	@include mix.adaptivFont(24, 18);
+	@include mix.adaptivFont(24, 14);
 	font-family: var.$subFamily;
 	text-transform: lowercase;
 	letter-spacing: 19.2px;

@@ -2,6 +2,12 @@
 @use '../base/mixin' as mix;
 @use '../base/extentsions';
 
+.header {
+	&._hidden {
+		display: none;
+	}
+}
+
 .navigation {
 	position: fixed;
 	top: 0;
@@ -42,7 +48,6 @@
 }
 
 .warning {
-
 	& path {
 		transition: fill .6s ease;
 	}
@@ -50,7 +55,7 @@
 	@media (any-hover: hover) {
 		&:hover {
 			& path {
-				fill: red;
+				fill: #cdd403;
 			}
 		}
 	}
