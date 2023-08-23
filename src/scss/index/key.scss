@@ -22,8 +22,8 @@
 		height: 100%;
 		@include mix.displayFlex(flex, center, center);
 		flex-direction: column;
-		gap: 46px;
-		margin-bottom: 50px;
+		gap: clamp(1.38rem, 1.0940rem + 1.4300vw, 2.81rem);
+		margin-bottom: clamp(1.8rem, 0.9100rem + 4.4500vw, 6.25rem);
 	}
 
 	&__title {

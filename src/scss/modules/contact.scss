@@ -26,20 +26,22 @@
 
 	&__wrapper {
 		@include mix.displayFlex(flex, center, center);
+		padding: 3.5rem 0 2rem 0;
 	}
 
 	&__body {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 2em;
+		gap: 3rem;
 		width: 100%;
 		min-height: 732px;
 	}
 
 	&__title {
-		@include mix.adaptivFont(50, 30);
-		letter-spacing: 5px;
+		@include mix.adaptivFont(50, 18);
+		letter-spacing: clamp(0rem, -0.5923rem + 5.1726vw, 0.3125rem);
+		line-height: 1.3em;
 		margin-bottom: .5em;
 	}
 
@@ -64,7 +66,7 @@
 .social-wrapper {
 	display: flex;
 	align-items: center;
-	gap: 2em;
+	gap: 2.5rem;
 
 	&__column {
 		display: flex;

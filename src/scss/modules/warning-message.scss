@@ -25,8 +25,10 @@
 		position: relative;
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		min-height: 100vh;
 		padding: 3em 0;
+		gap: 3em;
 	}
 
 	&__close {
@@ -43,7 +45,7 @@
 	}
 
 	&__title {
-		@include mix.adaptivFont(var.$titleFontSize, var.$titleFontSizeMin);
+		@include mix.adaptivFont(var.$titleFontSize, 28);
 
 		@media screen and (min-width: 1920px) {
 			font-size: 90px;
@@ -55,31 +57,47 @@
 
 	&__call-block {
 		display: flex;
-		justify-content: space-between;
 		gap: 1em;
 	}
 
 	&__call {
-		@include mix.adaptivFont(100, var.$titleFontSizeMin);
+		flex: 1 1 60%;
+		@include mix.adaptivFont(90, 20);
 
 		@media screen and (min-width: 1920px) {
-			font-size: 100px;
+			font-size: 90px;
 		}
 
 		line-height: 1.3em;
 	}
 
 	&__button {
+		flex: 1 1 40%;
 		display: grid;
 		place-content: center;
 		align-items: center;
 		width: 100%;
-		max-width: 425px;
-		padding: 0.5em;
+
+		@media screen and (min-width: 769.98px) {
+			max-width: 425px;
+		}
+
+		padding: 1.3rem .5rem;
 		font-size: 32px;
+		@include mix.adaptivFont(32, 20);
+
+		@media screen and (min-width: 1920px) {
+			font-size: 32px;
+		}
+
 		letter-spacing: 3.5px;
 		font-weight: 400;
 		border: 2px solid var.$lightColor;
+
+		& svg {
+			width: clamp(2.5rem, 2.1429rem + 1.7857vw, 3.75rem);
+			height: clamp(2.5rem, 2.1429rem + 1.7857vw, 3.75rem);
+		}
 
 		&>span {
 			display: flex;
@@ -91,5 +109,13 @@
 	&__accent {
 		color: var.$darkColor;
 		background: var.$lightColor;
+
+		&_btn {
+			display: grid;
+			place-content: center;
+			align-items: center;
+			width: 100%;
+			padding: 1.1rem .5rem;
+		}
 	}
 }

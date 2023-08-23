@@ -19,8 +19,8 @@
 	&__wrapper {
 		position: relative;
 		z-index: 1;
-		@include mix.displayFlex(flex, flex-start, flex-end);
-		gap: 70px;
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: clamp(1rem, 0.3000rem + 3.5000vw, 4.5rem);
 	}
 
 	&__column {
@@ -46,6 +46,6 @@
 	}
 
 	&__subtitle {
-		letter-spacing: 16.25px;
+		letter-spacing: clamp(0.25rem, 0.0968rem + 0.7660vw, 1.016rem);
 	}
 }

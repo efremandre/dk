@@ -8,6 +8,7 @@ export function initSlider() {
 		loop: true,
 		slidesPerView: 1,
 		speed: 2000,
+		spaceBetween: 30,
 		autoplay: {
 			delay: 3000,
 		},
@@ -55,7 +56,7 @@ export function initSlider() {
 
 	const portfolioSliderVideo = new Swiper('.slider-video__swiper', {
 		modules: [Navigation, Pagination],
-		loop: 'true',
+		// loop: 'true',
 		slidesPerView: 1,
 		speed: 1000,
 		pagination: {
@@ -112,11 +113,11 @@ export function initSlider() {
 
 		document.querySelector('.slider-video__counter').innerHTML = `
 		<span class="slider-video__counter-current">
-		${currentSlide < 10 ? + currentSlide - 2 : currentSlide - 2}
+		${currentSlide < 10 ? + currentSlide : currentSlide}
 		</span> 
 		/ 
 		<span class="slider-video__counter-total">
-		${this.slides.length - 2}
+		${this.slides.length}
 		</span>`
 	})
 

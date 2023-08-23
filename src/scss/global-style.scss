@@ -94,7 +94,7 @@ a:focus {
 	box-sizing: border-box;
 	max-width: #{var.$widthContainer + px};
 	margin: 0 auto;
-	padding: 0 1.3em;
+	padding: 0 clamp(0.62rem, 0.3806rem + 1.0216vw, 1.3rem);
 }
 
 .main-section {
@@ -106,13 +106,15 @@ a:focus {
 	color: var.$titleColor;
 	font-weight: var.$titleWeight;
 	line-height: var.$titleHeight;
-	letter-spacing: 9px;
+	letter-spacing: clamp(0.2rem, 0.1274rem + 0.3630vw, 0.563rem);
 	text-transform: uppercase;
 	font-family: var.$subFamily;
 }
 
 .decore {
 	position: fixed;
+	z-index: 2;
+	pointer-events: none;
 	display: flex;
 	justify-content: space-around;
 	width: 100%;
