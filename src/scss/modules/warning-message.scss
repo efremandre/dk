@@ -1,0 +1,121 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+@use '../base/extentsions';
+
+.warning-message {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 6;
+	width: 100%;
+	text-transform: uppercase;
+	background: var.$mainBg;
+	transform: scale(0);
+	transition: opacity .6s ease, visibility .6s ease, transform .7s ease;
+
+	&._active {
+		opacity: 1;
+		visibility: visible;
+		transform: scale(1);
+	}
+
+	&__wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 100vh;
+		padding: 3em 0;
+		gap: 3em;
+	}
+
+	&__close {
+		position: absolute;
+		top: 50px;
+		right: 0;
+		width: 50px;
+		height: 50px;
+		background: url('../../assets/images/icon/close.svg') center center / cover no-repeat;
+	}
+
+	&__title-block {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+		@include mix.adaptivFont(var.$titleFontSize, 28);
+
+		@media screen and (min-width: 1920px) {
+			font-size: 90px;
+		}
+
+		font-weight: 400;
+		line-height: 1.3em;
+	}
+
+	&__call-block {
+		display: flex;
+		gap: 1em;
+	}
+
+	&__call {
+		flex: 1 1 60%;
+		@include mix.adaptivFont(90, 20);
+
+		@media screen and (min-width: 1920px) {
+			font-size: 90px;
+		}
+
+		line-height: 1.3em;
+	}
+
+	&__button {
+		flex: 1 1 40%;
+		display: grid;
+		place-content: center;
+		align-items: center;
+		width: 100%;
+
+		@media screen and (min-width: 769.98px) {
+			max-width: 425px;
+		}
+
+		padding: 1.3rem .5rem;
+		font-size: 32px;
+		@include mix.adaptivFont(32, 20);
+
+		@media screen and (min-width: 1920px) {
+			font-size: 32px;
+		}
+
+		letter-spacing: 3.5px;
+		font-weight: 400;
+		border: 2px solid var.$lightColor;
+
+		& svg {
+			width: clamp(2.5rem, 2.1429rem + 1.7857vw, 3.75rem);
+			height: clamp(2.5rem, 2.1429rem + 1.7857vw, 3.75rem);
+		}
+
+		&>span {
+			display: flex;
+			align-items: center;
+			gap: .5em;
+		}
+	}
+
+	&__accent {
+		color: var.$darkColor;
+		background: var.$lightColor;
+
+		&_btn {
+			display: grid;
+			place-content: center;
+			align-items: center;
+			width: 100%;
+			padding: 1.1rem .5rem;
+		}
+	}
+}

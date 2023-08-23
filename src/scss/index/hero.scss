@@ -5,14 +5,22 @@
 .hero {
 	position: relative;
 	@include mix.displayFlex(flex, center, center);
-	height: 100%;
 	min-height: 100vh;
+	visibility: visible;
+	opacity: 1;
+	transition: visible .6s, opacity .5s;
+
+	&.hidden {
+		visibility: hidden;
+		opacity: 0;
+		display: none;
+	}
 
 	&__wrapper {
 		position: relative;
 		z-index: 1;
-		@include mix.displayFlex(flex, flex-start, flex-end);
-		gap: 70px;
+		@include mix.displayFlex(flex, flex-start, center);
+		gap: clamp(1rem, 0.3000rem + 3.5000vw, 4.5rem);
 	}
 
 	&__column {
@@ -38,63 +46,6 @@
 	}
 
 	&__subtitle {
-		letter-spacing: 16.25px;
-	}
-}
-
-.decore {
-	position: absolute;
-	display: flex;
-	justify-content: space-around;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-
-	&__item {
-		display: block;
-		width: 1px;
-		height: 0;
-		background: #111;
-		animation: decore 1s ease forwards;
-
-		&_1 {
-			animation-delay: .5s;
-		}
-
-		&_2 {
-			animation-delay: .7s;
-		}
-
-		&_3 {
-			animation-delay: .9s;
-		}
-
-		&_4 {
-			animation-delay: 1.1s;
-		}
-
-		&_5 {
-			animation-delay: 1.3s;
-		}
-
-		&_6 {
-			animation-delay: 1.5s;
-		}
-
-		&_7 {
-			animation-delay: 1.7s;
-		}
-	}
-}
-
-@keyframes decore {
-
-	from {
-		height: 0;
-	}
-
-	to {
-		height: 100vh;
+		letter-spacing: clamp(0.25rem, 0.0968rem + 0.7660vw, 1.016rem);
 	}
 }

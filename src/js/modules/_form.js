@@ -4,7 +4,6 @@ export function sendForm() {
 
 		const form = document.querySelectorAll('.ajax-contact-form')
 		const note = document.querySelectorAll('.form-callback')
-		console.log('form')
 
 		const formArr = Array.from(form)
 		const noteArr = Array.from(note)

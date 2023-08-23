@@ -38,14 +38,15 @@
     <link rel="apple-touch-icon" sizes="1024x1024" href="assets/images/favicons/apple-touch-icon-1024x1024.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poiret+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Poiret+One&display=swap" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script defer src="js/index.min.js"></script>
     <title></title>
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper" data-barba="wrapper">
         <header class="header">
             <div data-header class="header__navigation navigation">
                 <div class="navigation__button-block">
@@ -64,185 +65,484 @@
                 </div>
             </div>
         </header>
-        <main class="main">
-            <section class="main__hero hero">
-                <div class="container">
-                    <div class="hero__wrapper">
-                        <div class="hero__column">
-                            <h1 class="hero__main-title main-title">Идеальное представление Вашего бизнеса</h1>
-                        </div>
-                        <div class="hero__column">
-                            <h2 class="hero__subtitle subtitle">От идеи к реальности</h2>
-                            <span></span>
-                            <p class="hero__description">
-                                Мы гордимся тем, что сотрудничаем с влиятельными и уважаемыми клиентами из Москвы и Санкт-Петербурга.
-                                Мы стремимся создавать функциональные сайты для компаний и предпринимателей, которые соответствуют требованиям
-                                и
-                                потребностям наших заказчиков. Отличная репутация и долгосрочные отношения с нашими клиентами говорят сами за
-                                себя.
-                            </p>
+        <main class="main _hidden" data-barba="container" data-barba-namespace="home">
+            <section class="main__main-slider main-slider">
+                <div class="main-slider__swiper swiper">
+                    <div class="main-slider__counter-wrapper _hidden">
+                        <div class="main-slider__counter-column"></div>
+                        <div class="main-slider__counter-column">
+                            <div class="main-slider__counter">
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="main-slider__slider-wrapper swiper-wrapper">
+                        <!-- hero -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="hero__wrapper">
+                                    <div class="hero__column">
+                                        <h1 class="hero__main-title main-title">Идеальное представление Вашего бизнеса</h1>
+                                    </div>
+                                    <div class="hero__column">
+                                        <h2 class="hero__subtitle subtitle">От идеи к реальности</h2>
+                                        <span></span>
+                                        <p class="hero__description">
+                                            Мы гордимся тем, что сотрудничаем с влиятельными и уважаемыми клиентами из Москвы и Санкт-Петербурга.
+                                            Мы стремимся создавать функциональные сайты для компаний и предпринимателей, которые соответствуют
+                                            требованиям
+                                            и
+                                            потребностям наших заказчиков. Отличная репутация и долгосрочные отношения с нашими клиентами говорят
+                                            сами за
+                                            себя.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- key -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="key__wrapper">
+                                    <h2 class="key__title subtitle">
+                                        Делаем красиво <br>
+                                        <span class="subtitle-accent">Под ключ</span>
+                                    </h2>
+                                    <p class="key__subtitle-description subtitle-description">По договорённости</p>
+                                </div>
 
-                <div class="decore">
-                    <span class="decore__item decore__item_1"></span>
-                    <span class="decore__item decore__item_2"></span>
-                    <span class="decore__item decore__item_3"></span>
-                    <span class="decore__item decore__item_4"></span>
-                    <span class="decore__item decore__item_5"></span>
-                    <span class="decore__item decore__item_6"></span>
-                    <span class="decore__item decore__item_7"></span>
+                                <div class="key__swiper swiper">
+                                    <div class="key__slider-wrapper swiper-wrapper">
+                                        <div class="key__slide swiper-slide">
+                                            <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
+                                                Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
+                                                займёмся
+                                                продвижением и увеличим отдачу от вложений.</p>
+                                        </div>
+                                        <div class="key__slide swiper-slide">
+                                            <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
+                                                Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
+                                                займёмся
+                                                продвижением и увеличим отдачу от вложений.</p>
+                                        </div>
+                                        <div class="key__slide swiper-slide">
+                                            <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
+                                                Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
+                                                займёмся
+                                                продвижением и увеличим отдачу от вложений.</p>
+                                        </div>
+                                        <div class="key__slide swiper-slide">
+                                            <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
+                                                Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
+                                                займёмся
+                                                продвижением и увеличим отдачу от вложений.</p>
+                                        </div>
+                                    </div>
+                                    <div class="key__pagination swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- landing -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Лендинг</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 50.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Если ваша цель сосредоточить внимание клиента на одном конкретном товаре или услуге — лендинг станет для
+                                            вас отличным решением! Мы создаём уникальный дизайн под каждый landing page, наполняем его качественным
+                                            контентом и настраиваем рекламу.
+                                            Вы получаете воронку продаж, в которую будут попадать все ваши потенциальные клиенты.
+                                        </p>
+                                    </div>
+
+                                    <div class="main-slider__social-slide-wrapper">
+                                        <div class="main-slider__social-slide">
+                                            <div class="main-slider__social-slide-column">
+                                                <a href="#" class="main-slider__social-slide-link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+                                                        <path d="M44.9083 14.9937C44.6709 14.1117 44.206 13.3075 43.5602 12.6616C42.9143 12.0158 42.1101 11.5509 41.2281 11.3135C38.8177 10.3822 15.4656 9.92599 8.6906 11.3395C7.80846 11.577 7.00419 12.042 6.35831 12.6881C5.71243 13.3342 5.24761 14.1386 5.01039 15.0208C3.92185 19.7947 3.83955 30.1156 5.03747 34.9968C5.27485 35.8788 5.73974 36.683 6.38561 37.3289C7.03148 37.9748 7.83567 38.4396 8.71768 38.677C13.4916 39.776 36.1875 39.9302 41.2552 38.677C42.1372 38.4396 42.9414 37.9748 43.5872 37.3289C44.2331 36.683 44.698 35.8788 44.9354 34.9968C46.0958 29.7958 46.1781 20.1145 44.9083 14.9937Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M31.8407 24.9948L20.9584 18.7542V31.2354L31.8407 24.9948Z" stroke="white" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="main-slider__social-slide-column">
+                                                <a href="#" class="main-slider__social-slide-link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                                        <path d="M36.6046 4.56566C36.4968 4.47249 36.3655 4.41057 36.2251 4.38661C36.0846 4.36265 35.9403 4.37756 35.8077 4.42973L4.14208 16.8219C3.81927 16.9472 3.54594 17.174 3.36329 17.4682C3.18063 17.7624 3.09854 18.108 3.1294 18.4529C3.16026 18.7978 3.30239 19.1233 3.53436 19.3804C3.76634 19.6374 4.07559 19.8122 4.41551 19.8782L13.1249 21.5875V31.25C13.1248 31.6239 13.2365 31.9892 13.4456 32.299C13.6547 32.6089 13.9517 32.8492 14.2983 32.9891C14.5214 33.0786 14.7595 33.1247 14.9999 33.125C15.2515 33.1245 15.5004 33.0733 15.7318 32.9745C15.9632 32.8757 16.1723 32.7313 16.3468 32.55L20.7218 28.0188L27.4405 33.911C27.7811 34.2114 28.2192 34.3779 28.6733 34.3797C28.8717 34.3789 29.0687 34.3478 29.2577 34.2875C29.567 34.1896 29.8453 34.0123 30.0646 33.7732C30.2839 33.5341 30.4367 33.2416 30.5077 32.925L36.8546 5.33129C36.8864 5.193 36.8799 5.04866 36.8358 4.91378C36.7918 4.77889 36.7118 4.65855 36.6046 4.56566ZM4.37489 18.3407C4.36572 18.2651 4.38275 18.1886 4.42313 18.1241C4.4635 18.0596 4.52479 18.0108 4.59676 17.986L31.8858 7.30629L13.6046 20.4079L4.6577 18.6516C4.58187 18.6405 4.51223 18.6034 4.46066 18.5467C4.40909 18.49 4.37878 18.4172 4.37489 18.3407ZM15.4483 31.6813C15.3619 31.7703 15.251 31.8316 15.1296 31.8573C15.0083 31.8831 14.882 31.8721 14.7669 31.8259C14.6518 31.7797 14.553 31.7002 14.4832 31.5977C14.4134 31.4951 14.3757 31.3741 14.3749 31.25V22.4532L19.778 27.1875L15.4483 31.6813ZM29.2889 32.6407C29.2648 32.7468 29.2133 32.8447 29.1397 32.9248C29.066 33.0049 28.9727 33.0644 28.869 33.0974C28.7653 33.1304 28.6548 33.1358 28.5484 33.1129C28.442 33.0901 28.3434 33.0399 28.2624 32.9672L14.7546 21.1219L35.3327 6.37504L29.2889 32.6407Z" fill="white" />
+                                                    </svg>
+                                                </a>
+                                                <a href="#" class="main-slider__social-slide-link">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                                        <path d="M11.4999 34.3334C13.9999 35.8334 16.9999 36.6667 19.9999 36.6667C29.1666 36.6667 36.6666 29.1667 36.6666 20C36.6666 10.8334 29.1666 3.33337 19.9999 3.33337C10.8333 3.33337 3.33325 10.8334 3.33325 20C3.33325 23 4.16659 25.8334 5.49992 28.3334L4.06659 33.8434C3.99264 34.1278 3.99522 34.4268 4.07408 34.7099C4.15294 34.993 4.30526 35.2503 4.51561 35.4555C4.72595 35.6608 4.98684 35.8068 5.2718 35.8787C5.55677 35.9506 5.85569 35.9459 6.13825 35.865L11.4999 34.3334Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M27.5 24.7467C27.5 25.0167 27.44 25.295 27.3117 25.565C27.1807 25.844 27.0088 26.1018 26.8017 26.33C26.4333 26.735 26.0283 27.0267 25.5683 27.215C25.1183 27.4033 24.63 27.5 24.105 27.5C23.3383 27.5 22.52 27.32 21.655 26.9533C20.7405 26.5569 19.8739 26.0581 19.0717 25.4667C18.1991 24.8293 17.3757 24.1273 16.6083 23.3667C15.8491 22.6035 15.1488 21.7839 14.5133 20.915C13.9294 20.1198 13.4352 19.2623 13.04 18.3583C12.68 17.5 12.5 16.6833 12.5 15.905C12.5 15.395 12.59 14.9083 12.77 14.4583C12.95 14 13.2367 13.58 13.635 13.205C14.115 12.7317 14.64 12.5 15.1967 12.5C15.4067 12.5 15.6167 12.545 15.805 12.635C16 12.725 16.1717 12.86 16.3083 13.055L18.0517 15.5083C18.185 15.695 18.285 15.8683 18.3517 16.0333C18.4183 16.19 18.4567 16.3483 18.4567 16.49C18.4545 16.679 18.3997 16.8637 18.2983 17.0233C18.1826 17.2184 18.0414 17.3972 17.8783 17.555L17.3067 18.1483C17.2669 18.1872 17.2357 18.234 17.215 18.2857C17.1944 18.3373 17.1847 18.3927 17.1867 18.4483C17.1867 18.5067 17.195 18.56 17.21 18.62C17.2317 18.68 17.255 18.725 17.27 18.77C17.4033 19.0183 17.6367 19.34 17.9683 19.73C18.3067 20.12 18.6667 20.5183 19.0567 20.915C19.4633 21.3133 19.8533 21.68 20.2517 22.0183C20.6417 22.3467 20.965 22.5717 21.22 22.7067L21.3567 22.7683C21.4165 22.7897 21.4798 22.7999 21.5433 22.7983C21.6008 22.7996 21.6579 22.7888 21.711 22.7667C21.7641 22.7446 21.812 22.7117 21.8517 22.67L22.4217 22.1067C22.61 21.92 22.79 21.7783 22.9633 21.6867C23.1227 21.5851 23.3077 21.5308 23.4967 21.53C23.6544 21.5323 23.8102 21.5657 23.955 21.6283C24.12 21.695 24.2933 21.7917 24.48 21.92L26.9667 23.6833C27.1468 23.8006 27.2901 23.9664 27.38 24.1617C27.4579 24.3469 27.4987 24.5457 27.5 24.7467Z" stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- site -->
+                        <div id="sites" class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Сайты</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 100.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Наша команда создаёт многостраничные сайты под ключ. Мы разрабатываем уникальный дизайн под каждый
+                                            проект, проводим анализ конкурентов. Пишем на чистом коде, не используем конструкторы сайтов.
+                                            Оптимизируем сайты для продвижения в поисковых системах (SEO). Помогаем повысить престиж и премиальность
+                                            компании в глазах клиентов!
+                                        </p>
+                                        <div class="main-slider__portfolio">
+                                            <a href="./portfolio-sites.html" class="main-slider__portfolio-link">
+                                                Портфолио
+                                                <svg width="40" height="32" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M25 1L41.4167 17.4167M41.4167 17.4167L25 33.9167M41.4167 17.4167H0.583416" stroke="white" stroke-linecap="square" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- marketing -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Рекламу</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 30.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Занимаемся настройкой и ведением рекламы в Яндекс.Директ под ключ. Размещаем контекстную рекламу
+                                            и обеспечиваем привлечение целевого трафика. Увеличиваем конверсию и отдачу от вложений. Поднимаем
+                                            посещаемость и приводим заинтересованных потенциальных клиентов на ваш сайт. Далее всё зависит от вашего
+                                            продукта и контента на сайте.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- video -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Видео</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 15.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Предоставляем услуги видеографа. Прорабатываем концепцию, создаём и монтируем креативные ролики для
+                                            разных видов платформ. Используем профессиональное оборудование, которое гарантирует качественный
+                                            результат. Осуществим Вашу задумку без потери чувства стиля.
+                                        </p>
+                                        <div class="main-slider__portfolio">
+                                            <a href="./portfolio-video.html" class="main-slider__portfolio-link">
+                                                Портфолио
+                                                <svg width="42" height="35" viewBox="0 0 42 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M25 1L41.4167 17.4167M41.4167 17.4167L25 33.9167M41.4167 17.4167H0.583416" stroke="white" stroke-linecap="square" stroke-linejoin="round" />
+                                                </svg>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- design -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Дизайн</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 10.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Разрабатываем современный, удобный и красивый дизайн для презентация, сайтов, лендингов, промо-сайтов,
+                                            сайтов-визиток, корпоративных сайтов и интернет-магазинов под ключ. Подчёркиваем преимущества и
+                                            индивидуальность проекта. Поднимаем продажи и известность бренда. Формируем продающую структуру с
+                                            высокой конверсией. Создаем чистый эстетичный дизайн для всех разрешений.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- visual -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Визуал</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 15.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Создаём не просто красивый, но и продающий визуал для сайтов и аккаунтов в Instagram. Предоставляем
+                                            услуги мобильного фотографа, визажиста, стилиста, имиджмейкера, смм-специалиста и продюсера съёмки.
+                                            Выстраиваем личный бренд, повышаем узнаваемость, помогаем найти свой стиль и упаковываем Instagram под
+                                            ключ. Повышаем охваты и продажи, увеличиваем чек.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- text -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">Текст</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 5.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Предоставляем профессиональные услуги по копирайтингу. Наполняем текстом сайты, блоги, лендинги, бизнесы
+                                            и проекты под ключ. Силой слова убеждаем потенциальных покупателей и заказчиков в необходимости покупок
+                                            и заявок на вашем сайте. Для наполнения сайтов и лендингов используем ключевые слова, делаем контент
+                                            уникальным и полезным для SEO-продвижения. Пишем продающие посты для Telegram и Instagram на понятном
+                                            языке.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- smm -->
+                        <div class="main-slider__slide swiper-slide">
+                            <div class="container">
+                                <div class="main-slider__wrapper">
+                                    <div class="main-slider__column main-slider__column_border">
+                                        <div class="main-slider__animation-wrapper">
+                                            <h2 class="main-slider__title subtitle">
+                                                Делаем красиво <br>
+                                                <span class="main-slider__subtitle-wrapper">
+                                                    <b class="main-slider__subtitle-accent subtitle-accent">СММ</b>
+                                                </span>
+                                            </h2>
+                                            <p class="main-slider__subtitle-description subtitle-description">от 40.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="main-slider__column">
+                                        <p class="main-slider__description">
+                                            Предоставляем профессиональные услуги по копирайтингу. Наполняем текстом сайты, блоги, лендинги, бизнесы
+                                            и проекты под ключ. Силой слова убеждаем потенциальных покупателей и заказчиков в необходимости покупок
+                                            и заявок на вашем сайте. Для наполнения сайтов и лендингов используем ключевые слова, делаем контент
+                                            уникальным и полезным для SEO-продвижения. Пишем продающие посты для Telegram и Instagram на понятном
+                                            языке.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-slider__pagination swiper-pagination _hidden"></div>
                 </div>
             </section>
-            <section class="main__key key">
-                <div class="container">
-                    <div class="key__wrapper">
-                        <h2 class="key__title subtitle">
-                            Делаем красиво <br>
-                            <span class="subtitle-accent">Под ключ</span>
-                        </h2>
-                        <p class="key__subtitle-description subtitle-description">По договорённости</p>
-                    </div>
-
-                    <div class="key__swiper swiper">
-                        <div class="key__slider-wrapper swiper-wrapper">
-                            <div class="key__slide swiper-slide">
-                                <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
-                                    Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
-                                    займёмся
-                                    продвижением и увеличим отдачу от вложений.</p>
-                            </div>
-                            <div class="key__slide swiper-slide">
-                                <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
-                                    Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
-                                    займёмся
-                                    продвижением и увеличим отдачу от вложений.</p>
-                            </div>
-                            <div class="key__slide swiper-slide">
-                                <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
-                                    Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
-                                    займёмся
-                                    продвижением и увеличим отдачу от вложений.</p>
-                            </div>
-                            <div class="key__slide swiper-slide">
-                                <p class="key__slide-content">Доверьтесь команде профессионалов и продолжайте заниматься бизнесом!
-                                    Мы разработаем и запустим сайт с уникальным дизайном за вас, наполним продающим контентом и текстом,
-                                    займёмся
-                                    продвижением и увеличим отдачу от вложений.</p>
-                            </div>
+        </main>
+        <div class="loader">
+            <p class="loader__text loader__text_top">Делаем</p>
+            <p class="loader__text loader__text_bottom">Красиво</p>
+            <div class="loader__loader-decore loader-decore">
+                <span class="loader-decore__item loader-decore__item_1"></span>
+                <span class="loader-decore__item loader-decore__item_2"></span>
+                <span class="loader-decore__item loader-decore__item_3"></span>
+                <span class="loader-decore__item loader-decore__item_4"></span>
+                <span class="loader-decore__item loader-decore__item_5"></span>
+                <span class="loader-decore__item loader-decore__item_6"></span>
+                <span class="loader-decore__item loader-decore__item_7"></span>
+            </div>
+        </div>
+        <section class="main__contact contact">
+            <div class="container">
+                <div class="contact__wrapper">
+                    <div class="contact__body">
+                        <div class="contact__brif brif">
+                            <h2 class="contact__title subtitle">Бриф для составления ТЗ</h2>
+                            <a href="#" class="brif__link">
+                                <span class="contact__link-content">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M34.375 23.75C34.375 23.9158 34.3092 24.0747 34.1919 24.1919C34.0747 24.3092 33.9158 24.375 33.75 24.375H29.375V28.125H32.5C32.6658 28.125 32.8247 28.1908 32.9419 28.3081C33.0592 28.4253 33.125 28.5842 33.125 28.75C33.125 28.9158 33.0592 29.0747 32.9419 29.1919C32.8247 29.3092 32.6658 29.375 32.5 29.375H29.375V32.5C29.375 32.6658 29.3092 32.8247 29.1919 32.9419C29.0747 33.0592 28.9158 33.125 28.75 33.125C28.5842 33.125 28.4253 33.0592 28.3081 32.9419C28.1908 32.8247 28.125 32.6658 28.125 32.5V23.75C28.125 23.5842 28.1908 23.4253 28.3081 23.3081C28.4253 23.1908 28.5842 23.125 28.75 23.125H33.75C33.9158 23.125 34.0747 23.1908 34.1919 23.3081C34.3092 23.4253 34.375 23.5842 34.375 23.75ZM13.75 26.875C13.75 27.8696 13.3549 28.8234 12.6517 29.5267C11.9484 30.2299 10.9946 30.625 10 30.625H8.125V32.5C8.125 32.6658 8.05915 32.8247 7.94194 32.9419C7.82473 33.0592 7.66576 33.125 7.5 33.125C7.33424 33.125 7.17527 33.0592 7.05806 32.9419C6.94085 32.8247 6.875 32.6658 6.875 32.5V23.75C6.875 23.5842 6.94085 23.4253 7.05806 23.3081C7.17527 23.1908 7.33424 23.125 7.5 23.125H10C10.9946 23.125 11.9484 23.5201 12.6517 24.2233C13.3549 24.9266 13.75 25.8804 13.75 26.875ZM12.5 26.875C12.5 26.212 12.2366 25.5761 11.7678 25.1072C11.2989 24.6384 10.663 24.375 10 24.375H8.125V29.375H10C10.663 29.375 11.2989 29.1116 11.7678 28.6428C12.2366 28.1739 12.5 27.538 12.5 26.875ZM25 28.125C25 29.4511 24.4732 30.7229 23.5355 31.6605C22.5979 32.5982 21.3261 33.125 20 33.125H17.5C17.3342 33.125 17.1753 33.0592 17.0581 32.9419C16.9408 32.8247 16.875 32.6658 16.875 32.5V23.75C16.875 23.5842 16.9408 23.4253 17.0581 23.3081C17.1753 23.1908 17.3342 23.125 17.5 23.125H20C21.3261 23.125 22.5979 23.6518 23.5355 24.5895C24.4732 25.5271 25 26.7989 25 28.125ZM23.75 28.125C23.75 27.1304 23.3549 26.1766 22.6517 25.4733C21.9484 24.7701 20.9946 24.375 20 24.375H18.125V31.875H20C20.9946 31.875 21.9484 31.4799 22.6517 30.7767C23.3549 30.0734 23.75 29.1196 23.75 28.125ZM6.875 17.5V6.25C6.875 5.75272 7.07254 5.27581 7.42417 4.92418C7.77581 4.57254 8.25272 4.375 8.75 4.375H23.75C23.8321 4.37494 23.9134 4.39105 23.9893 4.42241C24.0652 4.45378 24.1341 4.49979 24.1922 4.55781L32.9422 13.3078C33.0002 13.3659 33.0462 13.4348 33.0776 13.5107C33.109 13.5866 33.1251 13.6679 33.125 13.75V17.5C33.125 17.6658 33.0592 17.8247 32.9419 17.9419C32.8247 18.0592 32.6658 18.125 32.5 18.125C32.3342 18.125 32.1753 18.0592 32.0581 17.9419C31.9408 17.8247 31.875 17.6658 31.875 17.5V14.375H23.75C23.5842 14.375 23.4253 14.3092 23.3081 14.1919C23.1908 14.0747 23.125 13.9158 23.125 13.75V5.625H8.75C8.58424 5.625 8.42527 5.69085 8.30806 5.80806C8.19085 5.92527 8.125 6.08424 8.125 6.25V17.5C8.125 17.6658 8.05915 17.8247 7.94194 17.9419C7.82473 18.0592 7.66576 18.125 7.5 18.125C7.33424 18.125 7.17527 18.0592 7.05806 17.9419C6.94085 17.8247 6.875 17.6658 6.875 17.5ZM24.375 13.125H30.9906L24.375 6.50781V13.125Z" fill="white" />
+                                    </svg>
+                                    Скачать и заполнить
+                                </span>
+                            </a>
                         </div>
-                        <div class="key__pagination swiper-pagination"></div>
-                    </div>
-                </div>
-            </section>
-            <section id="contact" class="main__contact contact">
-                <div class="container">
-                    <div class="contact__wrapper">
-                        <div class="contact__body">
-                            <div class="contact__brif brif">
-                                <h2 class="contact__title subtitle">Бриф для составления ТЗ</h2>
-                                <a href="#" class="brif__link">
+                        <div class="contact__social-wrapper social-wrapper">
+                            <div class="social-wrapper__column">
+                                <h2 class="contact__title subtitle">Написать нам</h2>
+                                <a href="#" class="social-wrapper__link">
+                                    <span class="contact__link-content">
+                                        <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ph:telegram-logo-thin">
+                                                <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
+                                            </g>
+                                        </svg>
+                                        В Телеграм
+                                    </span>
+                                </a>
+                                <a href="#" class="social-wrapper__link">
                                     <span class="contact__link-content">
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M34.375 23.75C34.375 23.9158 34.3092 24.0747 34.1919 24.1919C34.0747 24.3092 33.9158 24.375 33.75 24.375H29.375V28.125H32.5C32.6658 28.125 32.8247 28.1908 32.9419 28.3081C33.0592 28.4253 33.125 28.5842 33.125 28.75C33.125 28.9158 33.0592 29.0747 32.9419 29.1919C32.8247 29.3092 32.6658 29.375 32.5 29.375H29.375V32.5C29.375 32.6658 29.3092 32.8247 29.1919 32.9419C29.0747 33.0592 28.9158 33.125 28.75 33.125C28.5842 33.125 28.4253 33.0592 28.3081 32.9419C28.1908 32.8247 28.125 32.6658 28.125 32.5V23.75C28.125 23.5842 28.1908 23.4253 28.3081 23.3081C28.4253 23.1908 28.5842 23.125 28.75 23.125H33.75C33.9158 23.125 34.0747 23.1908 34.1919 23.3081C34.3092 23.4253 34.375 23.5842 34.375 23.75ZM13.75 26.875C13.75 27.8696 13.3549 28.8234 12.6517 29.5267C11.9484 30.2299 10.9946 30.625 10 30.625H8.125V32.5C8.125 32.6658 8.05915 32.8247 7.94194 32.9419C7.82473 33.0592 7.66576 33.125 7.5 33.125C7.33424 33.125 7.17527 33.0592 7.05806 32.9419C6.94085 32.8247 6.875 32.6658 6.875 32.5V23.75C6.875 23.5842 6.94085 23.4253 7.05806 23.3081C7.17527 23.1908 7.33424 23.125 7.5 23.125H10C10.9946 23.125 11.9484 23.5201 12.6517 24.2233C13.3549 24.9266 13.75 25.8804 13.75 26.875ZM12.5 26.875C12.5 26.212 12.2366 25.5761 11.7678 25.1072C11.2989 24.6384 10.663 24.375 10 24.375H8.125V29.375H10C10.663 29.375 11.2989 29.1116 11.7678 28.6428C12.2366 28.1739 12.5 27.538 12.5 26.875ZM25 28.125C25 29.4511 24.4732 30.7229 23.5355 31.6605C22.5979 32.5982 21.3261 33.125 20 33.125H17.5C17.3342 33.125 17.1753 33.0592 17.0581 32.9419C16.9408 32.8247 16.875 32.6658 16.875 32.5V23.75C16.875 23.5842 16.9408 23.4253 17.0581 23.3081C17.1753 23.1908 17.3342 23.125 17.5 23.125H20C21.3261 23.125 22.5979 23.6518 23.5355 24.5895C24.4732 25.5271 25 26.7989 25 28.125ZM23.75 28.125C23.75 27.1304 23.3549 26.1766 22.6517 25.4733C21.9484 24.7701 20.9946 24.375 20 24.375H18.125V31.875H20C20.9946 31.875 21.9484 31.4799 22.6517 30.7767C23.3549 30.0734 23.75 29.1196 23.75 28.125ZM6.875 17.5V6.25C6.875 5.75272 7.07254 5.27581 7.42417 4.92418C7.77581 4.57254 8.25272 4.375 8.75 4.375H23.75C23.8321 4.37494 23.9134 4.39105 23.9893 4.42241C24.0652 4.45378 24.1341 4.49979 24.1922 4.55781L32.9422 13.3078C33.0002 13.3659 33.0462 13.4348 33.0776 13.5107C33.109 13.5866 33.1251 13.6679 33.125 13.75V17.5C33.125 17.6658 33.0592 17.8247 32.9419 17.9419C32.8247 18.0592 32.6658 18.125 32.5 18.125C32.3342 18.125 32.1753 18.0592 32.0581 17.9419C31.9408 17.8247 31.875 17.6658 31.875 17.5V14.375H23.75C23.5842 14.375 23.4253 14.3092 23.3081 14.1919C23.1908 14.0747 23.125 13.9158 23.125 13.75V5.625H8.75C8.58424 5.625 8.42527 5.69085 8.30806 5.80806C8.19085 5.92527 8.125 6.08424 8.125 6.25V17.5C8.125 17.6658 8.05915 17.8247 7.94194 17.9419C7.82473 18.0592 7.66576 18.125 7.5 18.125C7.33424 18.125 7.17527 18.0592 7.05806 17.9419C6.94085 17.8247 6.875 17.6658 6.875 17.5ZM24.375 13.125H30.9906L24.375 6.50781V13.125Z" fill="white" />
+                                            <path d="M11.4999 34.3333C13.9999 35.8333 16.9999 36.6667 19.9999 36.6667C29.1666 36.6667 36.6666 29.1667 36.6666 20C36.6666 10.8333 29.1666 3.33334 19.9999 3.33334C10.8333 3.33334 3.33325 10.8333 3.33325 20C3.33325 23 4.16659 25.8333 5.49992 28.3333L4.06659 33.8433C3.99264 34.1278 3.99522 34.4267 4.07408 34.7099C4.15294 34.993 4.30526 35.2502 4.51561 35.4555C4.72595 35.6608 4.98684 35.8068 5.2718 35.8787C5.55677 35.9506 5.85569 35.9459 6.13825 35.865L11.4999 34.3333Z" stroke="white" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M27.5 24.7467C27.5 25.0167 27.44 25.295 27.3117 25.565C27.1807 25.844 27.0088 26.1018 26.8017 26.33C26.4333 26.735 26.0283 27.0267 25.5683 27.215C25.1183 27.4033 24.63 27.5 24.105 27.5C23.3383 27.5 22.52 27.32 21.655 26.9533C20.7405 26.5569 19.8739 26.0581 19.0717 25.4667C18.1991 24.8293 17.3757 24.1273 16.6083 23.3667C15.8491 22.6035 15.1488 21.7839 14.5133 20.915C13.9294 20.1198 13.4352 19.2623 13.04 18.3583C12.68 17.5 12.5 16.6833 12.5 15.905C12.5 15.395 12.59 14.9083 12.77 14.4583C12.95 14 13.2367 13.58 13.635 13.205C14.115 12.7317 14.64 12.5 15.1967 12.5C15.4067 12.5 15.6167 12.545 15.805 12.635C16 12.725 16.1717 12.86 16.3083 13.055L18.0517 15.5083C18.185 15.695 18.285 15.8683 18.3517 16.0333C18.4183 16.19 18.4567 16.3483 18.4567 16.49C18.4545 16.679 18.3997 16.8637 18.2983 17.0233C18.1826 17.2184 18.0414 17.3972 17.8783 17.555L17.3067 18.1483C17.2669 18.1872 17.2357 18.234 17.215 18.2857C17.1944 18.3373 17.1847 18.3927 17.1867 18.4483C17.1867 18.5067 17.195 18.56 17.21 18.62C17.2317 18.68 17.255 18.725 17.27 18.77C17.4033 19.0183 17.6367 19.34 17.9683 19.73C18.3067 20.12 18.6667 20.5183 19.0567 20.915C19.4633 21.3133 19.8533 21.68 20.2517 22.0183C20.6417 22.3467 20.965 22.5717 21.22 22.7067L21.3567 22.7683C21.4165 22.7897 21.4798 22.7999 21.5433 22.7983C21.6008 22.7996 21.6579 22.7888 21.711 22.7667C21.7641 22.7446 21.812 22.7117 21.8517 22.67L22.4217 22.1067C22.61 21.92 22.79 21.7783 22.9633 21.6867C23.1227 21.5851 23.3077 21.5308 23.4967 21.53C23.6544 21.5323 23.8102 21.5657 23.955 21.6283C24.12 21.695 24.2933 21.7917 24.48 21.92L26.9667 23.6833C27.1468 23.8006 27.2901 23.9664 27.38 24.1617C27.4579 24.3469 27.4987 24.5457 27.5 24.7467Z" stroke="white" stroke-width="1.3" stroke-miterlimit="10" />
                                         </svg>
-                                        Скачать и заполнить
+                                        В WhatsApp
                                     </span>
                                 </a>
                             </div>
-                            <div class="contact__social-wrapper social-wrapper">
-                                <div class="social-wrapper__column">
-                                    <h2 class="contact__title subtitle">Написать нам</h2>
-                                    <a href="#" class="social-wrapper__link">
-                                        <span class="contact__link-content">
-                                            <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g id="ph:telegram-logo-thin">
-                                                    <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
-                                                </g>
-                                            </svg>
-                                            В Телеграм
-                                        </span>
-                                    </a>
-                                    <a href="#" class="social-wrapper__link">
-                                        <span class="contact__link-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.4999 34.3333C13.9999 35.8333 16.9999 36.6667 19.9999 36.6667C29.1666 36.6667 36.6666 29.1667 36.6666 20C36.6666 10.8333 29.1666 3.33334 19.9999 3.33334C10.8333 3.33334 3.33325 10.8333 3.33325 20C3.33325 23 4.16659 25.8333 5.49992 28.3333L4.06659 33.8433C3.99264 34.1278 3.99522 34.4267 4.07408 34.7099C4.15294 34.993 4.30526 35.2502 4.51561 35.4555C4.72595 35.6608 4.98684 35.8068 5.2718 35.8787C5.55677 35.9506 5.85569 35.9459 6.13825 35.865L11.4999 34.3333Z" stroke="white" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M27.5 24.7467C27.5 25.0167 27.44 25.295 27.3117 25.565C27.1807 25.844 27.0088 26.1018 26.8017 26.33C26.4333 26.735 26.0283 27.0267 25.5683 27.215C25.1183 27.4033 24.63 27.5 24.105 27.5C23.3383 27.5 22.52 27.32 21.655 26.9533C20.7405 26.5569 19.8739 26.0581 19.0717 25.4667C18.1991 24.8293 17.3757 24.1273 16.6083 23.3667C15.8491 22.6035 15.1488 21.7839 14.5133 20.915C13.9294 20.1198 13.4352 19.2623 13.04 18.3583C12.68 17.5 12.5 16.6833 12.5 15.905C12.5 15.395 12.59 14.9083 12.77 14.4583C12.95 14 13.2367 13.58 13.635 13.205C14.115 12.7317 14.64 12.5 15.1967 12.5C15.4067 12.5 15.6167 12.545 15.805 12.635C16 12.725 16.1717 12.86 16.3083 13.055L18.0517 15.5083C18.185 15.695 18.285 15.8683 18.3517 16.0333C18.4183 16.19 18.4567 16.3483 18.4567 16.49C18.4545 16.679 18.3997 16.8637 18.2983 17.0233C18.1826 17.2184 18.0414 17.3972 17.8783 17.555L17.3067 18.1483C17.2669 18.1872 17.2357 18.234 17.215 18.2857C17.1944 18.3373 17.1847 18.3927 17.1867 18.4483C17.1867 18.5067 17.195 18.56 17.21 18.62C17.2317 18.68 17.255 18.725 17.27 18.77C17.4033 19.0183 17.6367 19.34 17.9683 19.73C18.3067 20.12 18.6667 20.5183 19.0567 20.915C19.4633 21.3133 19.8533 21.68 20.2517 22.0183C20.6417 22.3467 20.965 22.5717 21.22 22.7067L21.3567 22.7683C21.4165 22.7897 21.4798 22.7999 21.5433 22.7983C21.6008 22.7996 21.6579 22.7888 21.711 22.7667C21.7641 22.7446 21.812 22.7117 21.8517 22.67L22.4217 22.1067C22.61 21.92 22.79 21.7783 22.9633 21.6867C23.1227 21.5851 23.3077 21.5308 23.4967 21.53C23.6544 21.5323 23.8102 21.5657 23.955 21.6283C24.12 21.695 24.2933 21.7917 24.48 21.92L26.9667 23.6833C27.1468 23.8006 27.2901 23.9664 27.38 24.1617C27.4579 24.3469 27.4987 24.5457 27.5 24.7467Z" stroke="white" stroke-width="1.3" stroke-miterlimit="10" />
-                                            </svg>
-                                            В WhatsApp
-                                        </span>
-                                    </a>
-                                </div>
-                                <div class="social-wrapper__column">
-                                    <h2 class="contact__title subtitle">Посмотреть нас</h2>
-                                    <a href="#" class="social-wrapper__link">
-                                        <span class="contact__link-content">
-                                            <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g id="ph:telegram-logo-thin">
-                                                    <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
-                                                </g>
-                                            </svg>
-                                            В Телеграме
-                                        </span>
-                                    </a>
-                                    <a href="#" class="social-wrapper__link">
-                                        <span class="contact__link-content">
-                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M35.9265 11.995C35.7366 11.2894 35.3647 10.646 34.848 10.1293C34.3313 9.61265 33.688 9.24074 32.9824 9.05083C31.054 8.30583 12.3724 7.94083 6.95238 9.07167C6.24667 9.26164 5.60325 9.63368 5.08655 10.1505C4.56984 10.6674 4.19799 11.3109 4.00821 12.0167C3.13738 15.8358 3.07155 24.0925 4.02988 27.9975C4.21978 28.7031 4.59169 29.3465 5.10839 29.8632C5.62509 30.3799 6.26844 30.7518 6.97405 30.9417C10.7932 31.8208 28.9499 31.9442 33.004 30.9417C33.7097 30.7518 34.353 30.3799 34.8697 29.8632C35.3864 29.3465 35.7583 28.7031 35.9482 27.9975C36.8765 23.8367 36.9424 16.0917 35.9265 11.995Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M25.4724 19.9958L16.7666 15.0033V24.9883L25.4724 19.9958Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                            На YouTube
-                                        </span>
-                                    </a>
-                                </div>
+                            <div class="social-wrapper__column">
+                                <h2 class="contact__title subtitle">Посмотреть нас</h2>
+                                <a href="#" class="social-wrapper__link">
+                                    <span class="contact__link-content">
+                                        <svg width="40" height="40" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g id="ph:telegram-logo-thin">
+                                                <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
+                                            </g>
+                                        </svg>
+                                        В Телеграме
+                                    </span>
+                                </a>
+                                <a href="#" class="social-wrapper__link">
+                                    <span class="contact__link-content">
+                                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M35.9265 11.995C35.7366 11.2894 35.3647 10.646 34.848 10.1293C34.3313 9.61265 33.688 9.24074 32.9824 9.05083C31.054 8.30583 12.3724 7.94083 6.95238 9.07167C6.24667 9.26164 5.60325 9.63368 5.08655 10.1505C4.56984 10.6674 4.19799 11.3109 4.00821 12.0167C3.13738 15.8358 3.07155 24.0925 4.02988 27.9975C4.21978 28.7031 4.59169 29.3465 5.10839 29.8632C5.62509 30.3799 6.26844 30.7518 6.97405 30.9417C10.7932 31.8208 28.9499 31.9442 33.004 30.9417C33.7097 30.7518 34.353 30.3799 34.8697 29.8632C35.3864 29.3465 35.7583 28.7031 35.9482 27.9975C36.8765 23.8367 36.9424 16.0917 35.9265 11.995Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                                            <path d="M25.4724 19.9958L16.7666 15.0033V24.9883L25.4724 19.9958Z" stroke="white" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                        На YouTube
+                                    </span>
+                                </a>
                             </div>
-                            <div class="contact__form-container form-container">
-                                <h2 class="contact__title subtitle">Закажите бесплатную <br> консультацию</h2>
-                                <form class="ajax-contact-form contact__form form" action="#">
-                                    <div class="form__input">
-                                        <input id="name" type="text" name="name" placeholder="Имя" data-input-req>
-                                    </div>
-                                    <div class="form__input">
-                                        <input id="tg" type="text" name="tg" placeholder="Телеграм" required data-input-req>
-                                    </div>
-                                    <button class="form__button button" disabled data-button-send>Отправить</button>
-                                </form>
-                                <div class="form-callback"></div>
-                            </div>
+                        </div>
+                        <div class="contact__form-container form-container">
+                            <h2 class="contact__title subtitle">Закажите бесплатную <br> консультацию</h2>
+                            <form class="ajax-contact-form contact__form form" action="#">
+                                <div class="form__input">
+                                    <input id="name" type="text" name="name" placeholder="Имя" data-input-req>
+                                </div>
+                                <div class="form__input">
+                                    <input id="tg" type="text" name="tg" placeholder="Телеграм" required data-input-req>
+                                </div>
+                                <button class="form__button button" disabled data-button-send>Отправить</button>
+                            </form>
+                            <div class="form-callback"></div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <section class="main__warning-message warning-message">
-                <div class="container">
-                    <div class="warning-message__wrapper">
-                        <button id="warningMessageClose" class="warning-message__close"></button>
-                        <div class="warning-message__title-block">
-                            <p class="warning-message__title">Пока вы читаете это текст, мы <span class="warning-message__accent">приводим</span> клиентов вашим конкурентам</p>
-                        </div>
-                        <div class="warning-message__call-block">
-                            <p class="warning-message__call"><span class="warning-message__accent">Не теряйте время</span></p>
-                            <a href="#" class="warning-message__button">
-                                <span>
-                                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <g id="ph:telegram-logo-thin">
-                                            <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
-                                        </g>
-                                    </svg>
-                                    Написать</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <div class="button-up _hidden-button">
-                <button class="button-up__btn"></button>
             </div>
-        </main>
-        <footer class="footer">
-
-        </footer>
+        </section>
+        <section class="main__warning-message warning-message">
+            <div class="container">
+                <div class="warning-message__wrapper">
+                    <button id="warningMessageClose" class="warning-message__close"></button>
+                    <div class="warning-message__title-block">
+                        <p class="warning-message__title">Пока вы читаете это текст, мы <span class="warning-message__accent">приводим</span> клиентов вашим конкурентам</p>
+                    </div>
+                    <div class="warning-message__call-block">
+                        <p class="warning-message__call"><span class="warning-message__accent warning-message__accent_btn">Не теряйте
+                                время</span></p>
+                        <a href="#" class="warning-message__button">
+                            <span>
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g id="ph:telegram-logo-thin">
+                                        <path id="Vector" d="M54.907 6.84843C54.7453 6.70867 54.5485 6.6158 54.3378 6.57986C54.1271 6.54392 53.9106 6.56628 53.7117 6.64453L6.21327 25.2328C5.72906 25.4208 5.31907 25.761 5.04508 26.2023C4.7711 26.6435 4.64797 27.1619 4.69425 27.6792C4.74054 28.1966 4.95373 28.6849 5.3017 29.0705C5.64966 29.4561 6.11354 29.7182 6.62342 29.8172L19.6875 32.3812V46.875C19.6874 47.4357 19.8549 47.9837 20.1686 48.4485C20.4822 48.9133 20.9276 49.2738 21.4476 49.4836C21.7823 49.6178 22.1394 49.687 22.5 49.6875C22.8774 49.6866 23.2507 49.6098 23.5978 49.4617C23.9449 49.3135 24.2586 49.097 24.5203 48.825L31.0828 42.0281L41.1609 50.8664C41.6718 51.317 42.3289 51.5668 43.0101 51.5695C43.3077 51.5683 43.6033 51.5217 43.8867 51.4313C44.3507 51.2844 44.768 51.0183 45.0971 50.6597C45.4261 50.3011 45.6552 49.8624 45.7617 49.3875L55.282 7.99687C55.3297 7.78944 55.32 7.57293 55.2539 7.3706C55.1879 7.16827 55.0679 6.98776 54.907 6.84843ZM6.56249 27.5109C6.54874 27.3976 6.57428 27.2829 6.63484 27.1861C6.69541 27.0893 6.78734 27.0161 6.8953 26.9789L47.8289 10.9594L20.407 30.6117L6.98671 27.9773C6.87295 27.9607 6.7685 27.9051 6.69115 27.82C6.61379 27.735 6.56832 27.6258 6.56249 27.5109ZM23.1726 47.5219C23.043 47.6554 22.8766 47.7473 22.6946 47.7859C22.5126 47.8246 22.3231 47.8082 22.1505 47.7388C21.9778 47.6694 21.8297 47.5502 21.725 47.3964C21.6203 47.2426 21.5637 47.0611 21.5625 46.875V33.6797L29.6672 40.7812L23.1726 47.5219ZM43.9336 48.9609C43.8973 49.1201 43.8201 49.267 43.7097 49.3872C43.5992 49.5074 43.4593 49.5966 43.3037 49.6461C43.1481 49.6956 42.9824 49.7036 42.8228 49.6693C42.6632 49.6351 42.5153 49.5597 42.3937 49.4508L22.132 31.6828L52.9992 9.5625L43.9336 48.9609Z" fill="white" />
+                                    </g>
+                                </svg>
+                                Написать</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="decore">
+            <span class="decore__item decore__item_1"></span>
+            <span class="decore__item decore__item_2"></span>
+            <span class="decore__item decore__item_3"></span>
+            <span class="decore__item decore__item_4"></span>
+            <span class="decore__item decore__item_5"></span>
+            <span class="decore__item decore__item_6"></span>
+            <span class="decore__item decore__item_7"></span>
+        </div>
+        <div class="transition">
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+            <div class="transition__section">
+                <div class="transition__title"></div>
+            </div>
+        </div>
     </div>
 </body>
 

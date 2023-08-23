@@ -1,12 +1,15 @@
 @use '../base/variable' as var;
 
 ::-webkit-scrollbar {
-  width: 10px;
+	width: 4px;
 }
+
 ::-webkit-scrollbar-track {
-  //background-color: ;
+	background-color: #000;
 }
+
 ::-webkit-scrollbar-thumb {
-  border-radius: var.$borderRadius;
-  background-color: var.$accentColor;
+	border-radius: var.$borderRadius;
+	background-color: #565656;
+	border-radius: 8px;
 }
