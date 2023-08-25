@@ -59,7 +59,8 @@
 			transition: .6s width ease, .6s;
 
 			&:nth-child(1),
-			&:nth-child(2) {
+			&:nth-child(2),
+			&:last-child {
 				display: none;
 			}
 		}
@@ -79,6 +80,58 @@
 	&__wrapper {
 		@include mix.displayFlex(flex, flex-start, center);
 		gap: clamp(1rem, 0.3000rem + 3.5000vw, 4.5rem);
+
+		&_footer {
+			position: relative;
+			display: grid;
+			place-content: center;
+			align-items: center;
+			height: 100vh;
+			font-family: var.$subFamily;
+			@include mix.adaptivFont(12, 10);
+
+			@media screen and (min-width: 1920px) {
+				font-size: 12px;
+			}
+
+			& a {
+				font-family: var.$subFamily;
+				text-transform: uppercase;
+				@include mix.adaptivFont(12, 10);
+
+				@media screen and (min-width: 1920px) {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+
+	&__name-site {
+		position: relative;
+		text-align: center;
+		display: inline-block;
+		font-weight: 400;
+		font-size: clamp(1rem, 0.9500rem + 0.2500vw, 1.25rem);
+		letter-spacing: clamp(0rem, -0.2500rem + 1.2500vw, 1.25rem);
+
+		&>span {
+			position: absolute;
+			top: -1.3rem;
+			left: 0;
+			font-size: clamp(0.5rem, 0.4500rem + 0.2500vw, 0.75rem);
+			letter-spacing: 0.15rem;
+		}
+	}
+
+	&__technical-info {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 0;
 	}
 
 	&__column {
@@ -261,6 +314,8 @@
 			background: #fff;
 		}
 	}
+
+
 }
 
 @keyframes focus {

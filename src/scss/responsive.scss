@@ -33,7 +33,6 @@
 	}
 
 	.main-slider {
-
 		&__column {
 			&:nth-child(1) {
 				flex: 0 1 30%;
@@ -63,6 +62,7 @@
 
 @media screen and (max-width: 769.98px) {
 
+	.loader-decore,
 	.decore {
 		&__item {
 			width: calc(100% / 5);
@@ -146,6 +146,12 @@
 		}
 	}
 
+	.slider-portfolio {
+		&__description {
+			font-weight: 300;
+		}
+	}
+
 	.slider-video {
 		&__wrapper {
 			flex-direction: column;
@@ -223,13 +229,27 @@
 }
 
 @media screen and (max-width: 429.98px) {
+
+	.loader-decore,
 	.decore {
+
+		&__text {
+			line-height: 1.3em;
+		}
+
 		&__item {
 			width: calc(100% / 3);
 
 			&:nth-child(n + 4) {
 				display: none;
 			}
+
+			&:nth-child(3) {
+				.loader-decore__rain {
+					display: none;
+				}
+			}
+
 		}
 	}
 
@@ -275,6 +295,12 @@
 }
 
 @media screen and (max-width: 319.98px) {
+
+	.loader {
+		width: 100%;
+	}
+
+	.loader-decore,
 	.decore {
 		display: none;
 	}
