@@ -1,5 +1,5 @@
 'use strict'
-import Swiper, { Autoplay, Controller, Mousewheel, Navigation, Pagination } from 'swiper'
+import Swiper, { Autoplay, Controller, EffectFade, Mousewheel, Navigation, Pagination } from 'swiper'
 
 export function initSlider() {
 
@@ -32,12 +32,11 @@ export function initSlider() {
 		}
 	})
 
-	const portfolioSliderImage = new Swiper('.slider-portfolio__swiper-image', {
-		modules: [Controller, Navigation, Pagination],
+	const portfolioSlider = new Swiper('.slider-portfolio__swiper', {
+		modules: [Controller, Navigation, Pagination, EffectFade],
 		slidesPerView: 1,
-		speed: 1000,
-		spaceBetween: 30,
-		freeMode: true,
+		spaceBetween: 20,
+		effect: 'fade',
 		pagination: {
 			el: '.slider-portfolio__pagination.swiper-pagination',
 			clickable: true,
@@ -47,30 +46,6 @@ export function initSlider() {
 			prevEl: ".slider-portfolio__prev.swiper-button-prev",
 		}
 	})
-
-	const portfolioSlider = new Swiper('.slider-portfolio__swiper', {
-		modules: [Controller],
-		slidesPerView: 1,
-		spaceBetween: 20
-	})
-
-	const portfolioSliderVideo = new Swiper('.slider-video__swiper', {
-		modules: [Navigation, Pagination],
-		// loop: 'true',
-		slidesPerView: 1,
-		speed: 1000,
-		pagination: {
-			el: '.slider-video__pagination.swiper-pagination',
-			clickable: true,
-		},
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		}
-	})
-
-	portfolioSlider.controller.control = portfolioSliderImage
-	portfolioSliderImage.controller.control = portfolioSlider
 
 	mainSlider.on("slideChange afterInit init", function () {
 		const currentSlide = this.activeIndex + 1
@@ -85,13 +60,19 @@ export function initSlider() {
 			currentWrapper.classList.add('_hidden')
 			pagination.classList.add('_hidden')
 		}
+
+		if (currentSlide === this.slides.length) {
+			currentWrapper.classList.add('_hidden')
+			pagination.classList.add('_hidden')
+		}
+
 		currentCounter.innerHTML = `
 		<span class="main-slider__counter-current">
 		${currentSlide < 10 ? + currentSlide - 2 : currentSlide - 2}
 		</span> 
 		/ 
 		<span class="main-slider__counter-total">
-			${this.slides.length - 2}
+			${this.slides.length - 3}
 		</span>`
 	})
 
@@ -104,19 +85,6 @@ export function initSlider() {
 		</span> 
 		/ 
 		<span class="slider-portfolio__counter-total">
-		${this.slides.length}
-		</span>`
-	})
-
-	portfolioSliderVideo.on("slideChange afterInit init", function () {
-		let currentSlide = this.activeIndex + 1
-
-		document.querySelector('.slider-video__counter').innerHTML = `
-		<span class="slider-video__counter-current">
-		${currentSlide < 10 ? + currentSlide : currentSlide}
-		</span> 
-		/ 
-		<span class="slider-video__counter-total">
 		${this.slides.length}
 		</span>`
 	})
