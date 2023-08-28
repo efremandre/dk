@@ -36,7 +36,6 @@ export function initSlider() {
 		modules: [Controller, Navigation, Pagination, EffectFade],
 		slidesPerView: 1,
 		spaceBetween: 20,
-		effect: 'fade',
 		pagination: {
 			el: '.slider-portfolio__pagination.swiper-pagination',
 			clickable: true,
@@ -44,6 +43,25 @@ export function initSlider() {
 		navigation: {
 			nextEl: ".slider-portfolio__next.swiper-button-next",
 			prevEl: ".slider-portfolio__prev.swiper-button-prev",
+		},
+		breakpoints: {
+			490: {
+				effect: 'fade'
+			}
+		}
+	})
+
+	const portfolioSliderVideo = new Swiper('.slider-video__swiper', {
+		modules: [Controller, Navigation, Pagination],
+		slidesPerView: 1,
+		spaceBetween: 20,
+		pagination: {
+			el: '.slider-video__pagination.swiper-pagination',
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".slider-video__next.swiper-button-next",
+			prevEl: ".slider-video__prev.swiper-button-prev",
 		}
 	})
 
@@ -88,5 +106,19 @@ export function initSlider() {
 		${this.slides.length}
 		</span>`
 	})
+
+	portfolioSliderVideo.on("slideChange afterInit init", function () {
+		let currentSlide = this.activeIndex + 1
+
+		document.querySelector('.slider-video__counter').innerHTML = `
+		<span class="slider-video__counter-current">
+		${currentSlide}
+		</span> 
+		/ 
+		<span class="slider-video__counter-total">
+		${this.slides.length}
+		</span>`
+	})
+
 
 }

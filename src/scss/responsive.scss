@@ -24,6 +24,14 @@
 	}
 }
 
+@media screen and (min-width:1700px) {
+	.slider-portfolio {
+		&__counter-wrapper {
+			left: 0;
+		}
+	}
+}
+
 @media screen and (max-width: 989.98px) {
 	.hero {
 		&__wrapper {
@@ -57,7 +65,6 @@
 			flex: 0 1 50%;
 		}
 	}
-
 }
 
 @media screen and (max-width: 769.98px) {
@@ -224,6 +231,56 @@
 
 		&__link {
 			margin-bottom: 0;
+		}
+	}
+}
+
+@media screen and (max-width: 489.98px) {
+
+	.slider-portfolio {
+
+		&__counter-wrapper {
+			left: 0;
+		}
+
+		&__counter {
+			padding-bottom: 0;
+			text-align: center;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&__pagination {
+			display: none;
+		}
+
+		&__bottom-panel {
+			display: none;
+
+			&_mob {
+				display: block;
+				bottom: 25px;
+			}
+		}
+	}
+
+	.slide {
+		&__column {
+			&:nth-child(1) {
+				flex: 0 1 100%;
+			}
+
+			&:nth-child(2) {
+				display: none;
+			}
+		}
+
+		&__link {
+			&:after {
+				display: none;
+			}
 		}
 	}
 }
@@ -400,4 +457,120 @@
 	}
 }
 
+@media screen and (min-height: 800px) {
+
+	.slide {
+
+		&__image-wrapper {
+			height: 100%;
+		}
+
+		&__item-wrapper {
+			gap: clamp(1rem, 0.0000rem + 5.0000vw, 6rem);
+		}
+	}
+}
+
+@media screen and (max-height: 599px) {
+
+	.slider-portfolio {
+		&__counter {
+			padding-bottom: 0;
+			padding-top: 25px;
+
+			&:after {
+				display: none;
+			}
+		}
+
+		&__nav-button {
+			display: none;
+		}
+
+		&__bottom-panel {
+			display: none;
+
+			&_mob {
+				display: block;
+			}
+		}
+	}
+
+	.slide {
+		&__title {
+			font-size: 18px;
+			line-height: 1.3em;
+		}
+
+		&__description {
+			font-size: 14px;
+			font-weight: 300;
+			line-height: 1.4em;
+		}
+
+		&__item-wrapper {
+			gap: 1rem;
+		}
+
+		&__link {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media screen and (max-height: 799px) and (min-height: 600px) {
+
+	.slide {
+		&__image-wrapper {
+			height: 700px;
+		}
+	}
+}
+
+@media screen and (max-height: 599px) and (min-height: 400px) {
+	.slide {
+
+
+
+		&__image-wrapper {
+			height: 400px;
+
+
+		}
+	}
+}
+
+@media screen and (max-height: 399px) {
+	.slide {
+		&__image-wrapper {
+			height: 100%;
+		}
+
+		&__item-wrapper {
+			gap: .5rem;
+		}
+
+		&__link {
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
 @media (any-hover: none) and (orientation: landscape) {}
+
+
+@media screen and (min-width: 1600px) {}
+
+@media screen and (min-width:1280px) and (max-width:1599px) {}
+
+@media screen and (min-width:960px) and (max-width:1279px) {}
+
+@media screen and (min-width:640px) and (max-width:959px) {}
+
+@media screen and (min-width:321px) and (max-width:639px) {}
+
+@media screen and (max-width:320px) {}

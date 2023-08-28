@@ -16,6 +16,8 @@ export function warningMessage() {
 		header.classList.remove('_hidden')
 	}
 
-	warningButton.addEventListener('click', showWarningMessage)
-	warningMessageClose.addEventListener('click', hiddenWarningMessage)
+	if (warningButton) {
+		warningButton.addEventListener('click', showWarningMessage)
+		warningMessageClose.addEventListener('click', hiddenWarningMessage)
+	}
 }

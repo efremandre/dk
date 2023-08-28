@@ -7,6 +7,7 @@ import { initSlider } from "./modules/_initSlider.js"
 import { loader } from "./modules/_loader.js"
 import { warningMessage } from "./modules/_warningMessage.js"
 
+
 hello()
 loader()
 sendForm()
