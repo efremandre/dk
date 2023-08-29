@@ -1,5 +1,5 @@
 'use strict'
-import Swiper, { Autoplay, Controller, EffectFade, Mousewheel, Navigation, Pagination } from 'swiper'
+import Swiper, { Autoplay, Controller, EffectFade, HashNavigation, Mousewheel, Navigation, Pagination } from 'swiper'
 
 export function initSlider() {
 
@@ -19,10 +19,11 @@ export function initSlider() {
 	})
 
 	const mainSlider = new Swiper('.main-slider__swiper', {
-		modules: [Pagination, Mousewheel],
+		modules: [Pagination, Mousewheel, HashNavigation],
 		direction: "vertical",
 		slidesPerView: "auto",
 		speed: 600,
+		hashnav: true,
 		mousewheel: {
 			sensitivity: 1,
 		},
@@ -36,14 +37,32 @@ export function initSlider() {
 		modules: [Controller, Navigation, Pagination, EffectFade],
 		slidesPerView: 1,
 		spaceBetween: 20,
-		effect: 'fade',
+		breakpoints: {
+			490: {
+				effect: 'fade',
+				navigation: {
+					nextEl: ".slider-portfolio__next.swiper-button-next",
+					prevEl: ".slider-portfolio__prev.swiper-button-prev",
+				},
+				pagination: {
+					el: '.slider-portfolio__pagination.swiper-pagination',
+					clickable: true,
+				}
+			}
+		}
+	})
+
+	const portfolioSliderVideo = new Swiper('.slider-video__swiper', {
+		modules: [Controller, Navigation, Pagination],
+		slidesPerView: 1,
+		spaceBetween: 20,
 		pagination: {
-			el: '.slider-portfolio__pagination.swiper-pagination',
+			el: '.slider-video__pagination.swiper-pagination',
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".slider-portfolio__next.swiper-button-next",
-			prevEl: ".slider-portfolio__prev.swiper-button-prev",
+			nextEl: ".slider-video__next.swiper-button-next",
+			prevEl: ".slider-video__prev.swiper-button-prev",
 		}
 	})
 
@@ -88,5 +107,19 @@ export function initSlider() {
 		${this.slides.length}
 		</span>`
 	})
+
+	portfolioSliderVideo.on("slideChange afterInit init", function () {
+		let currentSlide = this.activeIndex + 1
+
+		document.querySelector('.slider-video__counter').innerHTML = `
+		<span class="slider-video__counter-current">
+		${currentSlide}
+		</span> 
+		/ 
+		<span class="slider-video__counter-total">
+		${this.slides.length}
+		</span>`
+	})
+
 
 }
