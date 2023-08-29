@@ -7,15 +7,13 @@
 @use './modules/form';
 @use './modules/loader';
 @use './modules/scrollbar';
-@use './modules/button-up';
-@use './modules/general-button';
 @use './modules/subtitle';
 @use './modules/social';
-@use './modules/logo';
 @use './layout/header';
 @use './index/main';
 @use './portfolio-sites/portfolio-sites';
 @use './portfolio-video/portfolio-video';
+@use './about-services/about-services';
 @use './modules/burger';
 @use './modules/contact';
 @use './modules/warning-message';
