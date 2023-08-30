@@ -1,0 +1,23 @@
+@use '../base/variable' as var;
+@use '../base/mixin' as mix;
+
+.button {
+	@include mix.displayFlex(flex, center, center);
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1em;
+	@include mix.adaptivFont(24, 18);
+	color: var.$lightColor;
+	text-transform: uppercase;
+	line-height: var.$generalLineHeight;
+	font-weight: 400;
+	border: 1px solid var.$lightColor;
+	background: none;
+	transition: opacity .5s ease;
+
+	@media (hover: hover) and (pointer: fine) {
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

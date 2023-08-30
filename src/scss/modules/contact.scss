@@ -3,16 +3,16 @@
 @use '../base/extentsions';
 
 .contact {
-	@include mix.displayFlex(flex, center, center);
-	overflow: auto;
 	position: fixed;
-	opacity: 0;
-	visibility: hidden;
 	top: 0;
 	left: 0;
 	z-index: 6;
+	// @include mix.displayFlex(flex, center, center);
 	width: 100%;
-	height: 100vh;
+	height: 100%;
+	overflow: auto;
+	visibility: hidden;
+	opacity: 0;
 	background: var.$mainBg;
 	transform: scale(0);
 	transition: opacity .6s ease, visibility .6s ease, transform .7s ease;
@@ -25,6 +25,7 @@
 
 	&__wrapper {
 		@include mix.displayFlex(flex, center, center);
+		min-height: 100vh;
 		padding: 3.5rem 0 2rem 0;
 	}
 
@@ -34,7 +35,6 @@
 		justify-content: center;
 		gap: 3rem;
 		width: 100%;
-		min-height: 732px;
 	}
 
 	&__title {

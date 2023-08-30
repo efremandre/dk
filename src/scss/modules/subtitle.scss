@@ -4,6 +4,10 @@
 .subtitle {
 	margin: 0;
 
+	&>span {
+		display: block;
+	}
+
 	@media screen and (min-width: 1920px) {
 		font-size: 25px;
 	}

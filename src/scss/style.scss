@@ -4,6 +4,7 @@
 @use '../../node_modules/aos/dist/aos.css';
 @use 'global-style';
 @use 'privacy/privacy';
+@use './modules/general-button';
 @use './modules/form';
 @use './modules/loader';
 @use './modules/scrollbar';
