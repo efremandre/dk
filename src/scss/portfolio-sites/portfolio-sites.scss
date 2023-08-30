@@ -213,10 +213,8 @@
 	height: 100%;
 
 	&.swiper-slide-active {
-		@media screen and (min-width: 569.98px) {
-			.slide__item-wrapper {
-				animation: transformText 1s forwards;
-			}
+		.slide__item-wrapper {
+			animation: transformText 1s forwards;
 		}
 	}
 

@@ -40,7 +40,6 @@ export function initSlider() {
 		effect: 'fade',
 		breakpoints: {
 			490: {
-				effect: 'fade',
 				navigation: {
 					nextEl: ".slider-portfolio__next.swiper-button-next",
 					prevEl: ".slider-portfolio__prev.swiper-button-prev",
