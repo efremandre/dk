@@ -37,6 +37,7 @@ export function initSlider() {
 		modules: [Controller, Navigation, Pagination, EffectFade],
 		slidesPerView: 1,
 		spaceBetween: 20,
+		effect: 'fade',
 		breakpoints: {
 			490: {
 				effect: 'fade',
@@ -53,9 +54,15 @@ export function initSlider() {
 	})
 
 	const portfolioSliderVideo = new Swiper('.slider-video__swiper', {
-		modules: [Controller, Navigation, Pagination],
+		modules: [Controller, Navigation, Pagination, EffectFade],
 		slidesPerView: 1,
 		spaceBetween: 20,
+		effect: 'fade',
+		breakpoints: {
+			490: {
+
+			}
+		},
 		pagination: {
 			el: '.slider-video__pagination.swiper-pagination',
 			clickable: true,
