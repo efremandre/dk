@@ -1,5 +1,4 @@
 'use strict'
-import barba from '@barba/core'
 
 export function transition() {
 	gsap.set(".transition__title", { xPercent: -110 })
@@ -21,16 +20,16 @@ export function transition() {
 		})
 	}
 
-	barba.init({
-		sync: true,
-		transitions: [{
-			async leave(data) {
-				const done = this.async()
+	// barba.init({
+	// 	sync: true,
+	// 	transitions: [{
+	// 		async leave(data) {
+	// 			const done = this.async()
 
-				pageTransition()
-				await delay(1000)
-				done()
-			}
-		}]
-	})
+	// 			pageTransition()
+	// 			await delay(1000)
+	// 			done()
+	// 		}
+	// 	}]
+	// })
 }
