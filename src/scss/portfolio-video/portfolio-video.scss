@@ -160,8 +160,9 @@
 		height: 100%;
 
 		&.swiper-slide-active {
-			opacity: 0;
-			animation: fadeEffect 3s forwards;
+			.slider-video__wrapper {
+				animation: transformText .6s forwards;
+			}
 		}
 
 		&::before {
@@ -177,13 +178,18 @@
 		}
 	}
 
+	&__wrapper {
+		opacity: 0;
+	}
+
 	&__video {
 		display: block;
 		position: absolute;
 		z-index: 0;
 		top: 0;
 		left: 0;
-		width: 100%;
+		min-width: 100%;
+		min-height: 100%;
 	}
 
 	&__contact-link-content {
@@ -286,5 +292,17 @@
 			width: clamp(1.25rem, 1.0000rem + 1.2500vw, 2.5rem);
 			background: #fffbfb;
 		}
+	}
+}
+
+@keyframes transformText {
+	from {
+		opacity: 0;
+		transform: translate(0, 10%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translate(0, 0);
 	}
 }
